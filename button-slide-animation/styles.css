@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 64px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 2px solid #2196f3;
+  border-radius: 100px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-right: 28px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+button span {
+  margin: 0px 4px;
+}
+
+button i {
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+button .right-icon {
+  right: 0.75rem;
+}
+
+button .left-icon {
+  left: -28px;
+}
+
+button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #2196f3;
+  z-index: -1;
+  transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+button:hover {
+  padding-left: 28px;
+  padding-right: 0.75rem;
+}
+
+button:hover .left-icon {
+  left: 0.75rem;
+}
+
+button:hover .right-icon {
+  right: -28px;
+}
+
+button:hover::before {
+  width: 100%;
+}
