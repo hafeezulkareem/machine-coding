@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 128px;
+  height: 128px;
+  border: 1px solid black;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
