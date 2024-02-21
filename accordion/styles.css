@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.accordion-item {
+  background-color: aquamarine;
+  margin: 8px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-item .arrow {
+  transition: transform 0.2s linear 0s;
+}
+
+.accordion-item.opened .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-item .description {
+  height: 0px;
+  transition: height 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.accordion-item.opened .description {
+  height: 120px;
+}
